@@ -6,7 +6,10 @@ function Event() {
     alert('Button was clicked!');
     };
     return (
-    <button onClick={handleClick}>Click Me!</button>
+        <div class='center'>
+            <button onClick={handleClick}>Click Me!</button>
+        </div>
+    
     );
     }
 

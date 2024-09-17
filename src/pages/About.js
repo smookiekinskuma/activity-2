@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import './Pages.css';
+import React from 'react';
 
-function About() {
-    const [count, setCount] = useState(0);
+const About = () => {
     return (
-        <div>
-        <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>Click me</button>
-        <button onClick={() => setCount(prev => prev + 1)}>Increment</button>
-        <button onClick={() => setCount(prev => prev - 1)}>Decrement</button>
-        <button onClick={() => setCount(0)}>Restart</button>
-        </div>
-    );
+        <>
+        <h1>About</h1>
+        <h3>Something about us!</h3>
+        </>
+    )
+
 }
 
 export default About;

@@ -1,34 +1,38 @@
-import './App.css';
+import './pages/Pages.css';
 import React from 'react';
 
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Layout from './pages/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
+import Contact from './pages/Contact';
+import CounterPage from './pages/Counter';
+import Other from './pages/OtherFunc';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
     <div>
-      <h4>Navigation</h4>
 
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
-      </nav>
-
-      <Router>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element ={<Home />} />
+            <Route path="/About" element={<About />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Counter" element={<CounterPage />} />
+            <Route path="/Other" element={<Other />} />
+            <Route path="/NotFound" element={<NotFound />} />
+          </Route>
         </Routes>
-      </Router>
+      </BrowserRouter>
 
     </div>
   );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
 export default App;

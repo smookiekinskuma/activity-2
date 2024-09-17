@@ -8,7 +8,7 @@ function Example() {
     document.title = `You clicked ${count} times`;
     }, [count]); // Only runs when 'count' changes
     return (
-    <div>
+    <div class='center'>
     <p>You clicked {count} times</p>
     <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>

@@ -7,11 +7,14 @@ function Form() {
     alert(`Form submitted with value: ${inputValue}`);
     };
     return (
-    <form onSubmit={handleSubmit}>
-    <input type="text" value={inputValue} onChange={(e) =>
-    setInputValue(e.target.value)} />
-    <button type="submit">Submit</button>
-    </form>
+        <div class='center'>
+            <form onSubmit={handleSubmit}>
+            <input type="text" value={inputValue} onChange={(e) =>
+            setInputValue(e.target.value)} />
+            <button type="submit">Submit</button>
+            </form>
+        </div>
+    
     );
     }
 
