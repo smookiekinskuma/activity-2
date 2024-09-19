@@ -24,7 +24,7 @@ function App() {
             <Route path="/Contact" element={<Contact />} />
             <Route path="/Counter" element={<CounterPage />} />
             <Route path="/Other" element={<Other />} />
-            <Route path="/NotFound" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </BrowserRouter>
